@@ -1,5 +1,38 @@
-img {
+.curved_image {
 	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
 	border-radius: 7px;
+}
+
+.drop-shadow {
+	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.curved-hz-1::before {
+top: 50%;
+bottom: 0;
+left: 10px;
+right: 10px;
+-moz-border-radius: 100px / 10px;
+border-radius: 100px / 10px;
+}
+.curved::before {
+top: 10px;
+bottom: 10px;
+left: 0;
+right: 50%;
+-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+-moz-box-shadow: 0 0 15px rgba(0,0,0,0.6);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+-moz-border-radius: 10px / 100px;
+border-radius: 10px / 100px;
+}
+.drop-shadow::before, .drop-shadow::after {
+content: "";
+position: absolute;
+z-index: -2;
+}
+
+.profile {
+	width: 32px;
 }
