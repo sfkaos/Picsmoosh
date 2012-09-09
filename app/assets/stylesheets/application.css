@@ -45,7 +45,7 @@
 	bottom: 4px;
 	background-color: white;
 	opacity: .6;
-	z-index: 99;
+	z-index: -99;
 }
 
 .description_text {

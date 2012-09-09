@@ -2,9 +2,9 @@
 
 
 <% @pictures.each_with_index do |p, index| %>
-		<div class='image_box'>
+		<div class='image_box' id='image_<%=index%>'>
     <%= image_tag(p.photo_url, :class => 'image' ) %>
-		<div class='description_box'>
+		<div class='description_box' id='description_<%=index%>' >
 			<span class='description_text'>
     <%= p.description %>, <%= p.likes %>, <%= p.comments %>, <%= p.social_network %>
 			</span>
@@ -14,3 +14,20 @@
 		</div>
     
 <% end %>
+
+
+<script>
+$(".image_box").hover(
+  function () {
+	  var index = $(this).attr("id").split("_")[1];
+    // $(this).append($("<span> ***</span>"));
+		$("#description_"+index).show();
+		
+  }, 
+  function () {
+		var index = $(this).attr("id").split("_")[1];
+    // $(this).find("span:last").remove();
+  }
+);
+
+</script>
