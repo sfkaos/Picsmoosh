@@ -1,3 +1,6 @@
+<%= stylesheet_link_tag("/stylesheets/ajay.css") %>
+
+
 <% @pictures.each do |p| %>
     <%= image_tag p.photo_url %>
     <%= p.description %>, <%= p.likes %>, <%= p.comments %>, <%= p.social_network %>
