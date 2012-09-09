@@ -1,7 +1,9 @@
 Hack::Application.routes.draw do
   
   resources :pictures
-  
+  match 'facebook/new' => 'facebook#new'
+  match 'facebook/create' => 'facebook#create'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

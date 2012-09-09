@@ -1,1 +1,7 @@
-booyah
+<% @pictures.each do |p| %>
+    <%= image_tag p.photo_url %>
+    <%= p.description %>, <%= p.likes %>, <%= p.comments %>, <%= p.social_network %>
+
+    <%= image_tag p.user_photo_url %>
+    <%= p.user_name %>
+<% end %>
