@@ -37,6 +37,7 @@
 .image_box {
 	position: relative;
 	z-index: 1;
+	float: left;
 }
 
 .description_box {

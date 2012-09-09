@@ -36,3 +36,15 @@ z-index: -2;
 .profile {
 	width: 32px;
 }
+.col_0, .col_1, .col_2 {
+	float: left;
+}
+.col_0 {
+	width: 400px;
+}
+.col_1 {
+	width: 375px;
+}
+.col_2 {
+	width: 200px;
+}

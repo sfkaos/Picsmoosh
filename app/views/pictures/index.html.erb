@@ -1,18 +1,18 @@
-<%= stylesheet_link_tag("/stylesheets/ajay.css") %>
-
-
-<% @pictures.each_with_index do |p, index| %>
-		<div class='image_box' id='image_<%=index%>'>
-    <%= image_tag(p.photo_url, :class => 'image' ) %>
-		<div class='description_box' id='description_<%=index%>' >
-			<span class='description_text'>
-    <%= p.description %>, <%= p.likes %>, <%= p.comments %>, <%= p.social_network %>
-			</span>
-		</div>
-    <%# image_tag p.user_photo_url %>
-    <%# p.user_name %>
-		</div>
+<% @layout.each_with_index do |col, index| %>
+    <div class='col_<%= index %>'>
+        <% col.each_with_index do |elem, index| %>
+        <% p = elem.last %>
+        <div class='image_box' id='image_<%=index%>'>
+            <%= image_tag(p.photo_url, :class => "big_img image_#{elem.last.id} drop-shadow curved curved-hz-1 curved_image image", :style => "width:#{elem[1]}px" ) %>
+            <div class='description_box' id='description_<%=index%>' >
+                <span class='description_text'>
+                    <%= p.description %>, <%= p.likes %>, <%= p.comments %>, <%= p.social_network %>
+                </span>
+            </div>
+        </div>
     
+        <% end %>
+    </div>
 <% end %>
 
 
