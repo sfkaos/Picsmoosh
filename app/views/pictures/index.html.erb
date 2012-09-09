@@ -2,9 +2,14 @@
 
 
 <% @pictures.each_with_index do |p, index| %>
-    <%= image_tag(p.photo_url, :id => ('modal-trigger' if index == 0) ) %>
+		<div class='image_box'>
+    <%= image_tag(p.photo_url, :class => 'image' ) %>
+		<div class='description_box'>
+			<span class='description_text'>
     <%= p.description %>, <%= p.likes %>, <%= p.comments %>, <%= p.social_network %>
-
-    <%= image_tag p.user_photo_url %>
-    <%= p.user_name %>
+			</span>
+		</div>
+    <%# image_tag p.user_photo_url %>
+    <%# p.user_name %>
+		</div>
 <% end %>

@@ -8,19 +8,19 @@ $(function() {
     });
   });
   
-  var $modal = $('<div id="image_frame">This is my modal.</div>')
+  var $modal = $('<div id="image_frame"><div id="profile_frame"><div id="profile_photo"><img src="http://images.instagram.com/profiles/profile_13494644_75sq_1340759945.jpg" class="profile_photo"/><p></p></div></div><div id="detail_frame">hello</div></div>')
     .attr('id', 'modal')
     .css({
-      background: '#fff',
-    zIndex: 3000,
-    padding: '10px',
-    width: '640px',
-    height: '240px',
-    margin: '0 auto',
-    opacity: 1,
-    position: 'absolute',
-    top: '10%',
-    left: '10%'
+	    background: '#f5f5f5',
+	    zIndex: 3000,
+			padding: '20px 18px',
+	    width: '650px',
+	    height: '240px',
+	    margin: 'auto',
+	    opacity: 1,
+	    position: 'absolute',
+	    top: '10%',
+	    left : '300px'
   });
   
   $('#modal-trigger').click(function(evt) {

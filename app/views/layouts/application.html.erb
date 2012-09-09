@@ -4,6 +4,7 @@
   <title>Hack</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "win.css" %>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/lib/syntaxhighlighter/scripts/shCore.js"></script>
   <script type="text/javascript" src="js/lib/syntaxhighlighter/scripts/shBrushJScript.js"></script>
@@ -12,8 +13,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id='container'>
+	<div id='banner'>
+		<img src='images/logo_final.png' id='banner_logo'>
+	</div>
+	<div id='image_container'>
+			<%= yield %>
+</div>
 </body>
 </html>
