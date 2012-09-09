@@ -1,0 +1,77 @@
+#image_frame {
+	height: 650px;
+	width: 500px;
+	top-padding: 20px;
+}
+
+#profile_frame {
+	width: 200px;
+	background-color: green;
+	float: left;
+}
+
+#detail_frame {
+	width: 428px;
+	background-color: red;
+	float: left;
+}
+
+.profile_photo {
+	margin-bottom: 8px;
+}
+
+.caption {
+	font-size: 12px;
+}
+
+
+.image_box {
+	position: relative;
+	z-index: 1;
+	float: left;
+}
+
+.description_box {
+	width: 100%;
+	position: absolute;
+	bottom: 4px;
+	background-color: white;
+	opacity: 1;
+	z-index: 99;
+	padding: 5px;
+}
+
+.description_text {
+	opacity: 1;
+}
+
+.profile_photo_thumb {
+	height: 20px;
+	width: 20px;
+}
+
+img.like_comment {
+	margin-right: 5px;
+}
+
+.like_comment {
+	line-height: 13px;
+	font-size: 13px;
+	color: #cccccc;
+	float: left;
+}
+
+.username {
+	color: #444444;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+#profile_right_box {
+	float: left;
+	margin-left: 5px;
+}
+
+#profile_photo_box {
+	float: left;
+}

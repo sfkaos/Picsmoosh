@@ -5,9 +5,20 @@
         <div class='image_box' id='image_<%=index%>'>
             <%= image_tag(p.photo_url, :class => "big_img image_#{elem.last.id} drop-shadow curved curved-hz-1 curved_image image", :style => "width:#{elem[1]}px" ) %>
             <div class='description_box' id='description_<%=index%>' >
-                <span class='description_text'>
-                    <%= p.description %>, <%= p.likes %>, <%= p.comments %>, <%= p.social_network %>
-                </span>
+                <div class='description_text'>
+                    <p class='caption'><%= p.description %></p> 
+                </div>
+								<div class='image_details'>
+									<div id='profile_photo_box'>
+									<%=image_tag(p.user_photo_url, :size => '30x30')%> 
+									</div>
+									<div id='profile_right_box'>
+									<span class='username'><%= p.user_name.upcase %></span>
+										<div id='likes_comments_box'>
+											<%= image_tag('/images/like_icn.png', :class => 'like_comment')%>  <div class='like_comment'><%= p.likes %></div> <%= image_tag('/images/comments_icn.png', :class => 'like_comment', :style => 'margin-left:25px')%> <div class='like_comment'><%= p.comments %></div> 
+										</div>
+									</div>
+								</div>
             </div>
         </div>
     

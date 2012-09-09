@@ -33,22 +33,3 @@
 	padding-top: 9px;
 	padding-left: 15px;
 }
-
-.image_box {
-	position: relative;
-	z-index: 1;
-	float: left;
-}
-
-.description_box {
-	width: 100%;
-	position: absolute;
-	bottom: 4px;
-	background-color: white;
-	opacity: .6;
-	z-index: -99;
-}
-
-.description_text {
-	opacity: 1;
-}
