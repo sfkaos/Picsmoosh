@@ -1,5 +1,5 @@
-<% @pictures.each do |p| %>
-    <%= image_tag p.photo_url %>
+<% @pictures.each_with_index do |p, index| %>
+    <%= image_tag(p.photo_url, :id => ('modal-trigger' if index == 0) ) %>
     <%= p.description %>, <%= p.likes %>, <%= p.comments %>, <%= p.social_network %>
 
     <%= image_tag p.user_photo_url %>
