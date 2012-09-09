@@ -7,7 +7,6 @@ class PicturesController < ApplicationController
     # 
     # @friend_photos = friends[0,5].collect{|f| f.photos(:limit => 5)}.flatten
     
-    @pictures = Picture.limit(50).all
-    @test = "test"
+    @pictures = Picture.limit(50).order("likes + comments DESC")
   end
 end
